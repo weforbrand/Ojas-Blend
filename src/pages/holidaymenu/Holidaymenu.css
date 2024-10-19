@@ -1,0 +1,144 @@
+.holiday-menu {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.top-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .top-section {
+    flex-direction: row;
+  }
+}
+
+.description {
+  flex: 1;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  text-align: justify;
+}
+
+.image-container {
+  flex: 1;
+}
+
+.holiday-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.menu-section h3 {
+  margin-top: 30px;
+  color: #acd55f;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #acd55f;
+  padding-bottom: 10px;
+}
+
+.menu-section ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.menu-section ul li {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  padding-left: 20px;
+  position: relative;
+}
+
+.menu-section ul li:before {
+  content: "•";
+  color: #acd55f;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.5rem;
+}
+
+.menu-section ul li strong {
+  color: #333;
+  font-weight: bold;
+}
+
+@media (min-width: 576px) {
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  .menu-section h3 {
+    font-size: 1.75rem;
+  }
+
+  .menu-section ul li {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  h2 {
+    font-size: 3rem;
+  }
+
+  .menu-section h3 {
+    font-size: 2rem;
+  }
+
+  .menu-section ul li {
+    font-size: 1.125rem;
+  }
+}
+
+:focus {
+  outline: 3px solid #acd55f;
+  outline-offset: 4px;
+}
+
+.menu-section {
+  margin-top: 20px;
+}
+
+.menu-section h3 {
+  margin-bottom: 10px;
+}
+
+.menu-section h3.add-ons {
+  color: #444;
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .holiday-menu {
+    padding: 10px;
+  }
+
+  .menu-section ul li {
+    font-size: 0.9rem;
+  }
+
+  .top-section {
+    margin-bottom: 20px;
+  }
+
+  .menu-section {
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,111 @@
+.footer {
+  background-color: #333333;
+  color: #f7f7f7;
+  padding: 40px 20px;
+  text-align: left;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.column {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.logo {
+  max-width: 100px;
+  margin-bottom: 20px;
+}
+
+.contactInfo {
+  margin: 0;
+}
+
+.address,
+.contactEmail {
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  margin-right: 10px;
+  color: #acd55f;
+}
+
+.link {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.link:hover {
+  color: #acd55f;
+}
+
+.heading {
+  margin: 0 0 10px;
+  font-size: 1.2em;
+  color: #f7f7f7;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 15px;
+}
+
+.socialLink {
+  color: #ffffff;
+  transition: color 0.3s;
+}
+
+.socialLink:hover {
+  color: #acd55f;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .column {
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo {
+    max-width: 80px;
+  }
+
+  .heading {
+    font-size: 1.5em;
+  }
+
+  .socialIcons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 20px 10px;
+  }
+
+  .heading {
+    font-size: 1.2em;
+  }
+}

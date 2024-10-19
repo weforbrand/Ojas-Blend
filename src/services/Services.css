@@ -1,0 +1,195 @@
+/* CSS Variables for theme consistency */
+:root {
+  --primary-color: #acd55f; /* Brand color */
+  --primary-color-dark: #8dbf2f; /* Darker variant for hover effects */
+  --text-color: #333;
+  --text-light-color: #666;
+  --background-color: #f9f9f9;
+  --font-size-base: 16px;
+  --line-height: 1.6;
+  --max-width-container: 1200px;
+  --spacing-large: 40px;
+  --spacing-medium: 20px;
+  --spacing-small: 10px;
+}
+
+/* Base styles for the body */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Add a more modern font if desired */
+  font-size: var(--font-size-base);
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Container for centering and spacing */
+.services-page {
+  padding: var(--spacing-large);
+}
+
+.services-container {
+  max-width: var(--max-width-container);
+  margin: 0 auto;
+  padding: 0 var(--spacing-medium);
+}
+
+/* Heading and subtitle styling */
+.services-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: var(--spacing-medium);
+  text-align: center; /* Center align for better aesthetics */
+}
+
+.services-subtitle {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: var(--spacing-medium);
+  color: var(--text-light-color);
+  text-align: center; /* Center align for better aesthetics */
+}
+
+.services-description {
+  font-size: var(--font-size-base);
+  margin-bottom: var(--spacing-large);
+  line-height: var(--line-height);
+  color: var(--text-light-color);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; /* Center align for better aesthetics */
+}
+
+/* Service section heading */
+.services-heading {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: var(--spacing-large);
+  text-align: center; /* Center align for better aesthetics */
+}
+
+/* Grid layout for services */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-large);
+}
+
+/* Individual service card */
+.service {
+  background-color: white;
+  padding: var(--spacing-medium);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  position: relative; /* For pseudo-element effect */
+}
+
+/* Shadow and transform effect on hover */
+.service:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Adding a pseudo-element for a subtle hover effect */
+.service::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.service:hover::after {
+  opacity: 1; /* Show on hover */
+}
+
+.service h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: var(--spacing-small);
+  color: var(--primary-color);
+}
+
+/* Icon styling */
+.service-icon {
+  font-size: 40px;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-small);
+}
+
+/* Paragraph styling */
+.service p {
+  font-size: 16px;
+  line-height: var(--line-height);
+  color: var(--text-light-color);
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1024px) {
+  .services-title {
+    font-size: 40px;
+  }
+
+  .services-subtitle {
+    font-size: 20px;
+  }
+
+  .services-heading {
+    font-size: 32px;
+  }
+
+  .service h3 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-title {
+    font-size: 36px;
+  }
+
+  .services-subtitle {
+    font-size: 18px;
+  }
+
+  .services-heading {
+    font-size: 28px;
+  }
+
+  .service h3 {
+    font-size: 20px;
+  }
+
+  .service p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-title {
+    font-size: 28px;
+  }
+
+  .services-subtitle {
+    font-size: 16px;
+  }
+
+  .services-heading {
+    font-size: 24px;
+  }
+
+  .service h3 {
+    font-size: 18px;
+  }
+
+  .service p {
+    font-size: 12px;
+  }
+}

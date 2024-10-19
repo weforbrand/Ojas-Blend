@@ -1,0 +1,167 @@
+/* Main container */
+.catering-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  padding: 40px;
+  background-color: #f8f9fa;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Left Section */
+.left-section {
+  padding: 20px;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.progress-bars {
+  margin-bottom: 30px;
+}
+
+.progress-item {
+  margin-bottom: 20px;
+}
+
+.progress-item label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  background-color: #e0e0e0;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  height: 12px;
+  width: 100%;
+}
+
+.progress {
+  height: 100%;
+  background-color: #acd55f;
+  border-radius: 20px;
+  transition: width 0.3s ease-in-out;
+}
+
+.percentage {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+/* Right Section */
+.right-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.photo-section img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.photo-section img:hover {
+  transform: scale(1.05);
+}
+
+.circle-section {
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+}
+
+.circle {
+  width: 120px;
+  height: 120px;
+  background-color: #acd55f;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.circle:hover {
+  transform: rotate(360deg);
+}
+
+.circle img {
+  width: 60px;
+  height: 60px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .catering-container {
+    padding: 20px;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .progress-bars {
+    margin-bottom: 20px;
+  }
+
+  .right-section {
+    margin-top: 30px;
+  }
+
+  .circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .circle img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 1.75rem;
+  }
+
+  .circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .circle img {
+    width: 40px;
+    height: 40px;
+  }
+}
